@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>School Management</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body class="bg-gray-100 min-h-screen">
+        <div class="container mx-auto py-8">
+            <h1 class="text-3xl font-bold mb-6 text-center">School Management System</h1>
+            <div class="mb-4">
+                <form id="studentForm" class="flex gap-2 justify-center">
+                    <input id="name" type="text" placeholder="Student Name" class="border p-2 rounded" required>
+                    <input id="grade" type="text" placeholder="Grade" class="border p-2 rounded" required>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Add Student</button>
+                </form>
+            </div>
+            <div>
+                <table class="min-w-full bg-white rounded shadow">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b">Name</th>
+                            <th class="py-2 px-4 border-b">Grade</th>
+                            <th class="py-2 px-4 border-b">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentsTable">
+                        <!-- Students will be rendered here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold mb-2">Add Teacher</h2>
+                <form id="teacherForm" class="flex gap-2 mb-4">
+                    <input id="teacherName" type="text" placeholder="Teacher Name" class="border p-2 rounded" required>
+                    <input id="teacherSubject" type="text" placeholder="Subject" class="border p-2 rounded" required>
+                    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Add Teacher</button>
+                </form>
+                <table class="min-w-full bg-white rounded shadow mb-8">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b">Name</th>
+                            <th class="py-2 px-4 border-b">Subject</th>
+                            <th class="py-2 px-4 border-b">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="teachersTable">
+                        <!-- Teachers will be rendered here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold mb-2">Add Class</h2>
+                <form id="classForm" class="flex gap-2 mb-4">
+                    <input id="className" type="text" placeholder="Class Name" class="border p-2 rounded" required>
+                    <select id="classTeacher" class="border p-2 rounded" required>
+                        <option value="">Select Teacher</option>
+                    </select>
+                    <button type="submit" class="bg-purple-500 text-white px-4 py-2 rounded">Add Class</button>
+                </form>
+                <table class="min-w-full bg-white rounded shadow">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b">Class Name</th>
+                            <th class="py-2 px-4 border-b">Teacher</th>
+                            <th class="py-2 px-4 border-b">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="classesTable">
+                        <!-- Classes will be rendered here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+
+</html>
